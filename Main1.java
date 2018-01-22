@@ -131,11 +131,11 @@ public class Main1 {
 			String s2 = s.substring(p1 + 1);
 			if (s0.startsWith(s1)) {
 				System.out.println("skip " + s1 + " because " + s0);
-				dictmap2.put(s1.getBytes(), m2.get(s2));// bug if there are level 3
+				dictmap2.put(s1.getBytes(UTF8), m2.get(s2));// bug if there are level 3
 				continue;
 			}
 			s0 = s1;
-			dictmap.put(s1.getBytes(), m2.get(s2));
+			dictmap.put(s1.getBytes(UTF8), m2.get(s2));
 		}
 		// System.out.println("dictmap:"+dictmap.size());
 		ti.check("dict2");
